@@ -181,24 +181,7 @@ border: none;
     background-color:#8C57EE0D, #F144AE0D;
 }
 
-@media screen and (max-width: 425px) {
-    .nav-container{
-        
-        flex-direction: column;
-    }
 
-    .nav-link{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .goat-sec{
-        flex-direction: column;
-    }
-
-    
-
-}
 .funny-sec{
     margin-top: 200px;
     height: 700px;
@@ -228,16 +211,32 @@ border: none;
     position: relative;
 
 }
+.img-parent{
+    position: relative;
+}
+.img-child{
+    
+    position: absolute;
+    top: 175px;
+    right: 175px;
+    text-align: center;
+  display: none;
+    border: 2px solid greenyellow;
+}
+
+
+
 
 .funny-img img:hover{
     border: 5px solid magenta;
-    /* background-image: url('/images/Rectangle\ 4.png'), */
-    /* linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)); */
+ 
+    display: block;
+    visibility: visible;
+     
+
     
-     background-blend-mode: overlay; 
   
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
-   
+
     
 }
 
@@ -343,10 +342,6 @@ border: transparent;
  
 }
 
-/* .img1{
-    display: flex;
-    text-align: center;} */
-
 .text{
     color: #0B0223;
 font-family: Work Sans;
@@ -366,7 +361,7 @@ background-clip: text;
 
 .footer{
     height: 700px;
-    border: 2px solid red;
+    
     background-color:  #0B0223;
 }
 
@@ -429,4 +424,44 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+}
+
+
+@media screen and (max-width: 425px) {
+    .nav-container{
+        
+        flex-direction: column;
+    }
+
+    .nav-link{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goat-sec{
+        flex-direction: column;
+        
+    }
+
+    .funny-sec{
+        flex-direction: column;
+    }
+
+    .funny-img{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .instant-sec{
+        flex-direction: column;
+    }
+
+    .btn-row1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+
 }
